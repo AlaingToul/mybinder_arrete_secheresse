@@ -1,0 +1,15 @@
+name: dev_vnf
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - altair<5
+  - protobuf<5
+  - branca
+  - mapclassify
+  - matplotlib
+  - streamlit-folium
+  - pandas
+  - geopandas
+  - jupyter-server-proxy==1.2.0
+  - nbserverproxy==0.8.8

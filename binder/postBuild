@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+# enable nbserverproxy
+jupyter serverextension enable --sys-prefix nbserverproxy
+# streamlit launches at startup
+cp binder/streamlit_call.py ${NB_PYTHON_PREFIX}/lib/python*/site-packages/
+cp app.py ${NB_PYTHON_PREFIX}/lib/python*/site-packages/
+# enable streamlit extension
+jupyter serverextension enable --sys-prefix streamlit_call
